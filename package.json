@@ -4,7 +4,10 @@
   "description": "This project requires the following software to be intstalled on your system\r 1. NodeJS / NPM - [https://nodejs.org/en/](https://nodejs.org/en/)\r 2. Git - [https://git-scm.com/downloads](https://git-scm.com/downloads)",
   "main": "backend/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
