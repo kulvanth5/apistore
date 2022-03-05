@@ -1,0 +1,109 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+ }
+ 
+ .App_container{
+     display: flex;
+  }
+  
+   .BGimage{
+      position: absolute;
+      width: 300px;
+      height: 175px;
+      left: 100px;
+      top: 120px;
+   } 
+  
+   #Rectangle{
+  
+      position: absolute;
+  width: 407px;
+  height: 170px;
+  left: 120px;
+  top: 125px;
+  z-index: -3;
+  
+  background: #D3B4F6;
+  border-radius: 1000px 0px 0px 1000px;
+  transform: rotate(-180deg);
+  
+   }
+  
+   .Title{
+       display: flex;
+       justify-content: center;
+      position: absolute;
+      width: 1240px;
+      height: 171px;
+      left: 100px;
+      top: 125px;
+      z-index: -5;
+      background: #C3E7FD;
+      border-radius: 10px;
+   }
+   .App_Description{
+     
+      position: absolute;
+  width: 395px;
+  height: 20px;
+  left: 590px;
+  top: 160px;
+  
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 58px;
+  
+  
+  letter-spacing: -0.02em;
+  
+  color: #1E272E;  
+   }
+  
+   .TagLine{
+      
+      position: absolute;
+  width: 319px;
+  height: 36px;
+  left: 590px;
+  top: 210px;
+  
+  font-family: DM Sans,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  
+  /* secondary text */
+  
+  color: #566474;
+  
+      
+   }
+  
+   .App_opener_button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      
+      position: absolute;
+      width: 133px;
+      height: 44px;
+      left: 1150px;
+      top: 190px;
+      color: white;
+  
+      background: #1E272E;
+      border-radius: 5px;
+   } 
+  
+   .App_opener_button:hover{
+       transform: scale(1.05);
+       box-shadow: 10px 10px grey;
+   }

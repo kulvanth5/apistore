@@ -1,0 +1,79 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.API_Image_Card {
+  width: 330px;
+  height: 333px ; 
+  top: 20px;
+  margin-left: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+} 
+
+.API_Image_Card:hover {
+  transform: scale(1.05);
+}
+#API_image {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.API_Name {
+  position: relative;
+  width: 300px;
+  height: 33px;
+  left: 50px;
+  top: 20px;
+
+  font-family: "DM Sans", sans-serif;
+  font-style: bold;
+  font-weight: 82;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+
+  /* primary text */
+
+  color: #1e272e;
+}
+
+.API_Description {
+  position: relative;
+  width: 291px;
+  height: 42px;
+  left: 50px;
+  top: 30px;
+
+  font-family: DM Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+
+  color: #566474;
+}
+
+.buttons{
+  width: 100%;
+  margin-left: 228px;
+  margin-top: 33px;
+}
+
+.edit_button{
+  width: 33px;
+  /* border-color: white; */
+  border-radius: 8px;
+  margin-left: 220px;
+}
+
+.delete_button{
+  width: 28px;
+  /* border-color: white; */
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+

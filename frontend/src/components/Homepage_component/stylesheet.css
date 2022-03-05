@@ -1,0 +1,36 @@
+
+  .Side_heading{
+     position: relative;
+     width: 100px;
+     height: 31px;
+     left: 110px;
+     top: 260px;  
+     
+     font-family: DM Sans,sans-serif;
+     font-style: normal;
+     font-weight: 520;
+     font-size: 24px;
+     line-height: 31px;
+     letter-spacing: -0.02em;
+     
+     color: #000000;
+     
+  }
+ 
+ .API_container{
+    display: grid;
+   grid-template-columns: repeat(4,1fr);
+    margin-top: 20%;
+    margin-left: 5%;
+    height: 500px; 
+ }
+ 
+ #BGimage{
+    position: relative;
+ width: 294px;
+ height: 172px;
+ left: 100px;
+ top: 48px;
+ 
+ }
+  

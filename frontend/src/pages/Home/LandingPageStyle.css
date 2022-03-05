@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Navbar{
+    margin-top: 1px;
+    display: flex;
+}
+#Logo{
+   
+    left: 46.74%;
+right: 35.97%;
+top: 23.13%;
+bottom: 1.8%;
+margin: 1.5%;
+margin-left: 4%;
+}
+
+.Navbar_button{
+    
+        width: 125px;
+        height: 45px;   
+        left: 16px;
+        margin-top: 1.5%;
+        margin-left: 75%;
+        color: white;
+        
+        background: #142683;
+        border-color: #142683;
+        border-radius: 5px;
+        
+ }
+
+ .Navbar_button:hover{
+    background-color: white;
+    color: #142683;
+ }
+
+ .Side_heading{
+     position: relative;
+     width: 100px;
+     height: 31px;
+     left: 110px;
+     top: 260px;  
+     
+     font-family: DM Sans,sans-serif;
+     font-style: normal;
+     font-weight: 520;
+     font-size: 24px;
+     line-height: 31px;
+     letter-spacing: -0.02em;
+     
+     color: #000000;
+     
+  }
+ 
+ .API_container{
+    display: grid;
+   grid-template-columns: repeat(4,1fr);
+    margin-top: 20%;
+    margin-left: 5%;
+    height: 500px; 
+ }
+ 
+ #BGimage{
+    position: relative;
+ width: 294px;
+ height: 172px;
+ left: 100px;
+ top: 48px;
+ 
+ }
+  
+ 

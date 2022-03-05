@@ -1,0 +1,77 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.Registration_form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+width: 600px;
+height: 500px;
+left: 500px;
+top: 120px;
+
+border: 1px solid #9cacac;
+box-sizing: border-box;
+border-radius: 10px;
+    border: 2px solid #9cacac;
+}
+
+.message{
+    margin-top: 5%;
+    margin-left: 100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:xx-large;
+}
+#name_signup{
+    width: 480px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#email_signup{
+    width: 480px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#password_signup{
+    width: 480px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+.submit{
+    margin-left: 50%;
+
+    width: 150px;
+height:55px;   
+left: 16px;
+top: 11px;
+margin-top: 8%;
+margin-left: 38%;
+color: white;
+
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 600;
+font-size:medium;
+background: #142683;
+border-color: #142683;
+border-radius: 12px;
+}
+
+.submit:hover{
+    background-color: white;
+    color: #142683;
+}

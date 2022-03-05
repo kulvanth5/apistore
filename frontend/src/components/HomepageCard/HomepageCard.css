@@ -1,0 +1,63 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.Homepage_Card {
+  position: relative;
+  width: 225px;
+  height: 100px;
+  width: 325px;
+
+  height: 350px;
+  left: 5px;
+  top: 20px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+} 
+
+.Homepage_Card:hover {
+  transform: scale(1.05);
+}
+#homecard_image {
+  margin-left: 25px;
+  margin-top: 26px;
+}
+
+.homecard_Name {
+  position: relative;
+  width: 300px;
+  height: 33px;
+  left: 30px;
+  top: 20px;
+
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 52;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+
+  /* primary text */
+
+  color: #1e272e;
+}
+
+.card_Description {
+  position: relative;
+  width: 291px;
+  height: 42px;
+  left: 28px;
+  top: 25px;
+
+  font-family: DM Sans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+
+  color: #566474;
+}
+
