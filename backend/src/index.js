@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-// const path = require("path");
+const path = require("path");
 dotenv.config({ path: __dirname + "/.env" });
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/auth");
@@ -13,7 +13,7 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static("public"));
+app.use(express.static(path.resolve(__dirname, "./frontend/build")));
 
 const corsOrigin = "http://localhost:3000";
 app.use(
@@ -39,15 +39,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
-
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept",
-//   );
-//   next();
-// });
 
 let port = process.env.PORT;
 
