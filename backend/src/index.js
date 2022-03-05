@@ -43,7 +43,7 @@ app.use("/api/auth", authRoutes);
 app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
 
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
