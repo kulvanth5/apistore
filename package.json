@@ -1,0 +1,19 @@
+{
+  "name": "apistore",
+  "version": "1.0.0",
+  "description": "This project requires the following software to be intstalled on your system\r 1. NodeJS / NPM - [https://nodejs.org/en/](https://nodejs.org/en/)\r 2. Git - [https://git-scm.com/downloads](https://git-scm.com/downloads)",
+  "main": "backend/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kulvanth5/hand-on-project-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kulvanth5/hand-on-project-starter/issues"
+  },
+  "homepage": "https://github.com/kulvanth5/hand-on-project-starter#readme"
+}
