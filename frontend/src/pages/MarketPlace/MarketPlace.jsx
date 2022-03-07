@@ -10,6 +10,7 @@ import APIcard from "../../components/APIcard/APIcard";
 
 // import edit from "./edit.png";
 import api from "./api.png";
+import { useNavigate } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
@@ -41,6 +42,10 @@ const MarketPlace = () => {
   const refresh = () => {
     window.location.reload();
   };
+
+  const handleOut = () => {
+    useNavigate("/");
+  }
 
   const handleAdd = async (e) => {
     e.preventDefault();
@@ -94,10 +99,10 @@ const MarketPlace = () => {
         <img src={logo} alt="logo-image" id="Logo" />
         <div className="Nav_buttons">
           <a className="user_APIs">My APIs</a>
-          <a className="user_account_button">My Account</a>
           <button className="create_API" onClick={openModal}>
             + New API
           </button>
+          <button className="logout" onClick={handleOut}>Logout</button>
         </div>
       </div>
       <Modal className="modal" isOpen={isOpen} onRequestClose={closeModal}>

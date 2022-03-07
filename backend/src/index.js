@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-// const path = require("path");
+const path = require("path");
 dotenv.config({ path: __dirname + "/.env" });
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/auth");
@@ -13,7 +13,6 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static("public"));
 
 const corsOrigin = "http://localhost:3000";
 app.use(
@@ -41,6 +40,20 @@ app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
 
 let port = process.env.PORT;
+
+var __dirname = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("APP is running..");
+  });
+}
 
 app.listen(port, () => {
   console.log("backend running at" + port);
