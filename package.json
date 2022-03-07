@@ -2,12 +2,13 @@
   "name": "nodejs-rest-api-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node backend/src/index.js",
     "client": "npm start --prefix frontend",
     "dev":"concurrently \"npm start\"\"npm run client\"",
-    "lint": "npx eslint src/"
+    "lint": "npx eslint src/",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
   "license": "ISC",
