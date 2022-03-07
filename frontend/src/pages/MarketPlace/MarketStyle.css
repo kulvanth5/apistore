@@ -33,7 +33,7 @@
   position: absolute;
   width: 135px;
   height: 44px;
-  left: 1200px;
+  left: 1120px;
   top: 22px;
   color: white;
 
@@ -51,18 +51,19 @@
   position: absolute;
   width: 135px;
   height: 44px;
-  left: 1300px;
+  left: 1330px;
   top: 22px;
-  color: white;
+  font: weight 500 ;
+  color:#142683;
 
-  background: #142683;
+  background:white;
   border-radius: 5px;
 }
 
 .logout:hover {
-  background-color: white;
-  border-color: #142683;
-  color: #142683;
+  background-color:#142683;
+  border-color: white;
+  color: white;
 }
 
 .modal {
