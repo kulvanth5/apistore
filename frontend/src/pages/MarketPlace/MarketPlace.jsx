@@ -51,7 +51,7 @@ const MarketPlace = () => {
     e.preventDefault();
     try {
       console.log("test..");
-      const url = "https://apismarket.herokuapp.com/api/products/insert";
+      const url = "https://store909.herokuapp.com/api/products/insert";
       const { res } = await axios.post(url, data);
 
       console.log(res.message);
@@ -68,7 +68,7 @@ const MarketPlace = () => {
   };
 
   useEffect(() => {
-    axios.get("https://apismarket.herokuapp.com/api/products/get").then((res) => {
+    axios.get("https://store909.herokuapp.com/api/products/get").then((res) => {
       setApiList(res.data);
     });
   }, []);
@@ -83,7 +83,7 @@ const MarketPlace = () => {
   };
   const handleUpdate = () => {
     console.log(update.id);
-    axios.put("https://apismarket.herokuapp.com/api/products/update", {
+    axios.put("https://store909.herokuapp.com/api/products/update", {
       id: update.id,
       data: data,
     });
@@ -91,7 +91,7 @@ const MarketPlace = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`https://apismarket.herokuapp.com/api/products/delete/${id}`);
+    axios.delete(`https://store909.herokuapp.com/api/products/delete/${id}`);
   };
   return (
     <>

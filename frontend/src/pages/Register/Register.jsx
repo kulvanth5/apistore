@@ -17,14 +17,17 @@ const Register = () => {
     setData({ ...data, [input.name]: input.value });
   };
 
-  const handleSubmit =  async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       console.log("hllo");
-      const url = "https://apismarket.herokuapp.com/api/users";
-      const { data: res } = await axios.post( url, data);
+      // const url = "https://store909.herokuapp.com/api/users";
+      const { data: res } = await axios.post(
+        "https://store909.herokuapp.com/api/users",
+        data,
+      );
       navigate("/login");
-      
+
       console.log(res.message);
     } catch (error) {
       if (
@@ -38,7 +41,7 @@ const Register = () => {
   };
   return (
     <div className="Registration_form">
-      <div className="Form_container" >
+      <div className="Form_container">
         <h2 className="message">Create an Account </h2>
         <input
           type="name"
