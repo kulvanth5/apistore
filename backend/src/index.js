@@ -14,7 +14,7 @@ const bodyParser = require("body-parser");
 
 app.use(express.json({ limit: "1mb" }));
 
-const corsOrigin = "http://localhost:3000";
+const corsOrigin = "https://thirsty-noether-5b86ee.netlify.app";
 app.use(
   cors({
     origin: [corsOrigin],
