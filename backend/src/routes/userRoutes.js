@@ -24,4 +24,4 @@ app.post("/", async (req, res) => {
     res.status(500).send({ message: "Hi" });
   }
 });
-module.exports = router;
+module.exports = app;
