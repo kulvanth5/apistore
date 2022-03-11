@@ -21,11 +21,8 @@ const Register = () => {
     e.preventDefault();
     try {
       console.log("hllo");
-      // const url = "https://store909.herokuapp.com//api/users";
-      const { data: res } = await axios.post(
-        "https://store909.herokuapp.com/api/users",
-        data,
-      );
+      const url = "http://localhost:4000/api/users";
+      const { data: res } = await axios.post(url, data);
       navigate("/login");
 
       console.log(res.message);

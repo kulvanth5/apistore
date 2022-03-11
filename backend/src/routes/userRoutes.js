@@ -1,9 +1,9 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 const { User, validate } = require("../models/userModels");
 const bcrypt = require("bcrypt");
 
-app.post("/", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { error } = validate(req.body);
     if (error)
@@ -24,4 +24,4 @@ app.post("/", async (req, res) => {
     res.status(500).send({ message: "Hi" });
   }
 });
-module.exports = app;
+module.exports = router;

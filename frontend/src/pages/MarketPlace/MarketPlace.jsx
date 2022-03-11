@@ -45,13 +45,13 @@ const MarketPlace = () => {
 
   const handleOut = () => {
     useNavigate("/");
-  }
+  };
 
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
       console.log("test..");
-      const url = "https://store909.herokuapp.com/api/products/insert";
+      const url = "http://localhost:4000/api/products/insert";
       const { res } = await axios.post(url, data);
 
       console.log(res.message);
@@ -68,7 +68,7 @@ const MarketPlace = () => {
   };
 
   useEffect(() => {
-    axios.get("https://store909.herokuapp.com/api/products/get").then((res) => {
+    axios.get("http://localhost:4000/api/products/get").then((res) => {
       setApiList(res.data);
     });
   }, []);
@@ -83,15 +83,15 @@ const MarketPlace = () => {
   };
   const handleUpdate = () => {
     console.log(update.id);
-    axios.put("https://store909.herokuapp.com/api/products/update", {
+    axios.put("http://localhost:4000/api/products/update", {
       id: update.id,
       data: data,
     });
-    setUpdate({ isUpdate: false, id: "" })
+    setUpdate({ isUpdate: false, id: "" });
   };
 
   const handleDelete = (id) => {
-    axios.delete(`https://store909.herokuapp.com/api/products/delete/${id}`);
+    axios.delete(`http://localhost:4000/api/products/delete/${id}`);
   };
   return (
     <>
@@ -102,7 +102,9 @@ const MarketPlace = () => {
           <button className="create_API" onClick={openModal}>
             + New API
           </button>
-          <button className="logout" onClick={handleOut}>Logout</button>
+          <button className="logout" onClick={handleOut}>
+            Logout
+          </button>
         </div>
       </div>
       <Modal className="modal" isOpen={isOpen} onRequestClose={closeModal}>
