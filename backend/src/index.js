@@ -34,7 +34,7 @@ mongoose
     console.log("error occured" + err);
   });
 
-app.use("/api/users", userRoutes);
+app.get("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
