@@ -38,17 +38,17 @@ app.use("/api/auth", authRoutes);
 app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join("/build")));
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join("/build")));
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve("src", "build", "index.html")),
-  );
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running..");
-  });
-}
+//   app.get("*", (req, res) =>
+//     res.sendFile(path.resolve("src", "build", "index.html")),
+//   );
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running..");
+//   });
+// }
 
 let port = process.env.PORT || 5000;
 
