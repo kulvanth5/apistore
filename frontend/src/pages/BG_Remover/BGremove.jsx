@@ -30,7 +30,7 @@ const Bgremove = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "https://store909.herokuapp.com/image-upload";
+    const url = "/image-upload";
     const res = await axios.post(url,{
       image,
     });

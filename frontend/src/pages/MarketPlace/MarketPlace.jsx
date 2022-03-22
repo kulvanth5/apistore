@@ -51,7 +51,7 @@ const MarketPlace = () => {
     e.preventDefault();
     try {
       console.log("test..");
-      const url = "http://localhost:4000/api/products/insert";
+      const url = "/api/products/insert";
       const { res } = await axios.post(url, data);
 
       console.log(res.message);
@@ -68,7 +68,7 @@ const MarketPlace = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/products/get").then((res) => {
+    axios.get("/api/products/get").then((res) => {
       setApiList(res.data);
     });
   }, []);
@@ -83,7 +83,7 @@ const MarketPlace = () => {
   };
   const handleUpdate = () => {
     console.log(update.id);
-    axios.put("http://localhost:4000/api/products/update", {
+    axios.put("/api/products/update", {
       id: update.id,
       data: data,
     });
@@ -91,7 +91,7 @@ const MarketPlace = () => {
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:4000/api/products/delete/${id}`);
+    axios.delete(`/api/products/delete/${id}`);
   };
   return (
     <>
