@@ -24,7 +24,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://store909.herokuapp.com/api/auth";
+      const url = "http://localhost:5000/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
       navigate("/home");
