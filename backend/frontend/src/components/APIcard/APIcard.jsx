@@ -3,18 +3,8 @@ import React from "react";
 import "./APIcardstyle.css";
 import PropTypes from "prop-types";
 import edit from "./edit.png";
-import trash from "./trash.png"
+import trash from "./trash.png";
 const APIcard = (props) => {
-  // return (
-  //   <>
-  //     <div className="API_Image_Card">
-  //       <img src={props.img} id="API_image" />
-  //       <h5 className="API_Name">{props.name}</h5>
-  //       <p className="API_Description">{props.description}</p>
-  //     </div>
-  //   </>
-  // );
-
   return (
     <>
       <div className="API_Image_Card">
