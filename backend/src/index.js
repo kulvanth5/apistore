@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-// const path = require("path");
+const path = require("path");
 dotenv.config({ path: __dirname + "/.env" });
 const userRoutes = require("./routes/userRoutes");
 const authRoutes = require("./routes/auth");
@@ -34,22 +34,24 @@ mongoose
     console.log("error occured" + err);
   });
 
+app.get("/main", (req, res) => {
+  res.send("test");
+});
+
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/image-upload", getImage);
 app.use("/api/products", apiRoutes);
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join("/build")));
+app.use(express.static(path.join(__dirname, "./src/build")));
 
-//   app.get("*", (req, res) =>
-//     res.sendFile(path.resolve("src", "build", "index.html")),
-//   );
-// } else {
-//   app.get("/", (req, res) => {
-//     res.send("API is running..");
-//   });
-// }
+app.get("*", function (_, res) {
+  res.sendFile(path.join(__dirname, "./src/build/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
 
 let port = process.env.PORT || 5000;
 
